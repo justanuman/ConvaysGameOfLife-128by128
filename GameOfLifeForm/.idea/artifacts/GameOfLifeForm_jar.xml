@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GameOfLifeForm:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GameOfLifeForm_jar</output-path>
+    <root id="archive" name="GameOfLifeForm.jar">
+      <element id="module-output" name="GameOfLifeForm" />
+    </root>
+  </artifact>
+</component>
