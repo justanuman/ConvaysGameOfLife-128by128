@@ -34,7 +34,7 @@ public class MainMenu {
 
     public MainMenu() {
         //  convayCalculator = new ConvayCalculator();
-
+        stopButton.setEnabled(false);
         // fsm = new StateMachine();
         ActionListener task = new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
