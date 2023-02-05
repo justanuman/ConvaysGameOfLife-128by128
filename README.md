@@ -7,4 +7,5 @@
 кнопка Reset: очищение поля симуляции
 Левая кнопка мыши: добавление клетки на поле
 Левая кнопка мыши + Shift: удаление клетки с поля
-![image](https://user-images.githubusercontent.com/45141610/216828203-c0c60b62-8ba5-49b0-acd7-6a817036ca68.png)
+![image](https://user-images.githubusercontent.com/45141610/216829290-e25cd89a-dce6-4356-a50d-dca62b8549e7.png)
+
