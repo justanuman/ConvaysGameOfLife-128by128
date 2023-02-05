@@ -21,7 +21,7 @@ public class LifeWindow extends JPanel {
             if (conv.getOldArray().get(i) == 1) {
                 graphic2d.setColor(Color.BLACK);
                 graphic2d.fillRect(x_cord, y_cord, 5, 5);
-                System.out.println("cell at " + i + " " + x_cord + " " + y_cord);
+               // System.out.println("cell at " + i + " " + x_cord + " " + y_cord);
             } else {
                 graphic2d.setColor(Color.WHITE);
                 graphic2d.fillRect(x_cord, y_cord, 5, 5);

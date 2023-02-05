@@ -53,6 +53,9 @@ public class MainMenu {
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                startButton.setEnabled(false);
+                stopButton.setEnabled(true);
+                resetButton.setEnabled(true);
                 start = true;
                 stop = false;
                 reset = false;
@@ -62,6 +65,9 @@ public class MainMenu {
         stopButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                startButton.setEnabled(true);
+                stopButton.setEnabled(false);
+                resetButton.setEnabled(true);
                 start = false;
                 stop = true;
                 reset = false;
@@ -70,8 +76,11 @@ public class MainMenu {
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                startButton.setEnabled(true);
+                stopButton.setEnabled(false);
+                resetButton.setEnabled(true);
                 start = false;
-                stop = false;
+                stop = true;
                 reset = true;
                 canvas.resetCells();
             }
@@ -84,21 +93,34 @@ public class MainMenu {
             }
         });*/
         //TODO ADJUST COORDINATES TO 680 by 680 outer 640 by 640 inner
-        panel1.addMouseListener(new MouseListener() {
+        /*panel1.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
 
-                if (e.getX() > 0 && e.getY() > 40 && e.getX() < 680 && e.getY() < 680 && stop && !e.isShiftDown()) {
+                if (e.getX() > 20 && e.getY() > 40 && e.getX() < 660 && e.getY() < 680 && stop && !e.isShiftDown()) {
                     canvas.addCell((e.getX() - 20) / 5, (e.getY() - 40) / 5);
-                    System.out.println(e.getX() / 5 + " mouseClicked " + e.getY() / 5);
-                } else if (e.getX() > 0 && e.getY() > 40 && e.getX() < 660 && e.getY() < 670 && stop && e.isShiftDown()) {
+                   // System.out.println(e.getX()  + " mouseClicked " + e.getY());
+                } else if (e.getX() > 20 && e.getY() > 40 && e.getX() < 660 && e.getY() < 680 && stop && e.isShiftDown()) {
                     canvas.removeCell((e.getX() - 20) / 5, (e.getY() - 40) / 5);
-                    System.out.println(e.getX() / 5 + " mouseClicked + shift " + e.getY() / 5);
+                  //  System.out.println(e.getX() + " mouseClicked + shift " + e.getY() );
                 }
                 canvas.paint(canvas.getGraphics());
+                System.out.println(e.getX()  + " mouseClicked " + e.getY());
+            }*/
+        canvas.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
+                if (e.getX() > 0 && e.getY() > 0 && e.getX() < 640 && e.getY() < 640 && stop && !e.isShiftDown()) {
+                    canvas.addCell((e.getX()) / 5, (e.getY()) / 5);
+                    // System.out.println(e.getX()  + " mouseClicked " + e.getY());
+                } else if (e.getX() > 0 && e.getY() > 0 && e.getX() < 640 && e.getY() < 640 && stop && e.isShiftDown()) {
+                    canvas.removeCell((e.getX()) / 5, (e.getY()) / 5);
+                    //  System.out.println(e.getX() + " mouseClicked + shift " + e.getY() );
+                }
+                canvas.paint(canvas.getGraphics());
+                System.out.println(e.getX()  + " mouseClicked " + e.getY());
             }
-
             @Override
             public void mousePressed(MouseEvent e) {
                 // System.out.println(e.getX()+" "+e.getY());
